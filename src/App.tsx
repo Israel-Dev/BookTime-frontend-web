@@ -2,7 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const { REACT_APP_SERVER } = process.env
+
+const App = () => {
+  
+  console.log("REACT_APP_SERVER", REACT_APP_SERVER)
+
   return (
     <div className="App">
       <header className="App-header">
