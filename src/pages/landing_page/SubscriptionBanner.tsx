@@ -1,6 +1,8 @@
 import Styles from './SubscriptionBanner.styled';
 import lineSeparator from '../../assets/line-separator.svg';
 import books from '../../assets/books.png';
+import bookOverlay from '../../assets/book-shape-overlay.svg';
+import Input from '../../common/Input';
 
 const SubscriptionBanner = () => {
     return (
@@ -16,13 +18,23 @@ const SubscriptionBanner = () => {
             />
             <section className="subscription-banner-section">
                 <p>Um pouco a cada dia, muito a cada semana</p>
-                <input type="text" />
+                <Input
+                    showButton={true}
+                    handleSubmit={() => {}}
+                    label="Subscrever"
+                    placeholder="Introduza aqui o seu email"
+                />
                 <p>Fique a saber assim que a app for lançada!</p>
             </section>
             <img
                 src={books}
                 alt="booktime-background"
                 className="subscription-banner-background-image"
+            />
+            <img
+                src={bookOverlay}
+                alt="subscription-banner-book-overlay"
+                className="subscription-banner-book-overlay"
             />
         </Styles>
     );

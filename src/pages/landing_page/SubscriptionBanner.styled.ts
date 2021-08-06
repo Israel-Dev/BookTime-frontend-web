@@ -4,7 +4,7 @@ import { colors } from '../../utils/colors';
 const styles = styled.section`
     position: relative;
     overflow: hidden;
-    height: 555px;
+    height: 755px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -15,6 +15,7 @@ const styles = styled.section`
     text-align: center;
 
     .subscription-banner-header {
+        margin-top: -70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -51,10 +52,20 @@ const styles = styled.section`
         margin: 0;
     }
 
+    .subscription-banner-book-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(55%);
+    }
+
     .subscription-banner-background-image {
         position: absolute;
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
+        object-fit: cover;
     }
 `;
 
