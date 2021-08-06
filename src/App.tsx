@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-
-const { REACT_APP_SERVER } = process.env;
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { LandingPage } from './pages/landing_page';
 
 const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>Edit src/App.tsx and save to reload.</p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <BrowserRouter>
+            <Switch>
+                <Route path={['/', '/home']} component={LandingPage} />
+            </Switch>
+        </BrowserRouter>
     );
 };
 
