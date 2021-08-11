@@ -3,8 +3,21 @@ import lineSeparator from '../../assets/line-separator.svg';
 import books from '../../assets/books.png';
 import bookOverlay from '../../assets/book-shape-overlay.svg';
 import Input from '../../common/Input';
+import { useState } from 'react';
+import UserController from '../../api/controllers/user.controler';
 
 const SubscriptionBanner = () => {
+    const [email, setEmail] = useState('');
+
+    const saveNewUser = async () => {
+        try {
+            const responseData = await UserController.saveNewUser(email);
+            console.log('responseData', responseData);
+        } catch (e) {
+            console.error(e);
+        }
+    };
+
     return (
         <Styles className="subscription-banner-wrapper">
             <header className="subscription-banner-header">
@@ -20,7 +33,8 @@ const SubscriptionBanner = () => {
                 <p>Um pouco a cada dia, muito a cada semana</p>
                 <Input
                     showButton={true}
-                    handleSubmit={() => {}}
+                    handleChange={setEmail}
+                    handleSubmit={saveNewUser}
                     label="Subscrever"
                     placeholder="Introduza aqui o seu email"
                 />
