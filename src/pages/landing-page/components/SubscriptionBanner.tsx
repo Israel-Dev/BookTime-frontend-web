@@ -1,12 +1,12 @@
 import Styles from './SubscriptionBanner.styled';
-import lineSeparator from '../../assets/line-separator.svg';
-import books from '../../assets/books.png';
-import bookOverlay from '../../assets/book-shape-overlay.svg';
-import Input from '../../common/Input';
+import lineSeparator from '../../../assets/line-separator.svg';
+import books from '../../../assets/books.png';
+import bookOverlay from '../../../assets/book-shape-overlay.svg';
+import Input from '../../../common/Input';
 import { useEffect, useState } from 'react';
-import UserController from '../../api/controllers/user.controler';
-import { RequestState } from '../../types/common';
-import Toast from '../../common/Toast';
+import UserController from '../../../api/controllers/user.controler';
+import { RequestState } from '../../../types/common';
+import Toast from '../../../common/Toast';
 
 const SubscriptionBanner = () => {
     const [email, setEmail] = useState('');
