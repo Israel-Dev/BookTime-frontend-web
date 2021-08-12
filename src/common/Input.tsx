@@ -1,5 +1,9 @@
+import { RequestState } from '../types/common';
 import Button from './Button';
 import Styles from './Input.styled';
+import Loading from '../icons/Loading';
+import Success from '../icons/Success';
+import Failed from '../icons/Failed';
 
 interface IProps {
     showButton?: boolean;
@@ -7,11 +11,24 @@ interface IProps {
     handleSubmit?: () => void;
     label?: string;
     placeholder?: string;
+    requestState: RequestState | null;
 }
 
 const Input = (props: IProps) => {
-    const { showButton, handleSubmit, handleChange, label, placeholder } =
-        props;
+    const {
+        showButton,
+        handleSubmit,
+        handleChange,
+        label,
+        placeholder,
+        requestState,
+    } = props;
+
+    const stateMapping = {
+        [RequestState.failed]: <Failed />,
+        [RequestState.loading]: <Loading />,
+        [RequestState.success]: <Success />,
+    };
 
     return (
         <Styles className="input-wrapper">
@@ -23,7 +40,12 @@ const Input = (props: IProps) => {
             />
             {showButton && handleSubmit && label && (
                 <article className="input-button-article">
-                    <Button label={label} callback={handleSubmit} />
+                    <Button
+                        label={
+                            requestState ? stateMapping[requestState] : label
+                        }
+                        callback={handleSubmit}
+                    />
                 </article>
             )}
         </Styles>

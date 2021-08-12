@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { futureUserEndpoint } from '../constants/endpoints';
 import { SaveNewFutureUserDTO } from '../dto/future-user';
 

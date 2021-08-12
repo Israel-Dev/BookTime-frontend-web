@@ -3,20 +3,52 @@ import lineSeparator from '../../assets/line-separator.svg';
 import books from '../../assets/books.png';
 import bookOverlay from '../../assets/book-shape-overlay.svg';
 import Input from '../../common/Input';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import UserController from '../../api/controllers/user.controler';
+import { RequestState } from '../../types/common';
+import Toast from '../../common/Toast';
 
 const SubscriptionBanner = () => {
     const [email, setEmail] = useState('');
+    const [requestState, setRequestState] = useState<RequestState | null>(null);
+    const [requestMessage, setRequestMessage] = useState<string | null>('');
 
     const saveNewUser = async () => {
+        if (requestState !== null) return;
         try {
+            setRequestState(RequestState.loading);
+
             const responseData = await UserController.saveNewUser(email);
-            console.log('responseData', responseData);
+
+            if (!responseData) {
+                setRequestState(RequestState.failed);
+                return setRequestMessage('O email não é válido');
+            }
+
+            setRequestMessage(responseData.message);
+
+            switch (responseData.status) {
+                case 200:
+                    setRequestState(RequestState.success);
+                    return;
+                case 400:
+                default:
+                    setRequestState(RequestState.failed);
+                    return;
+            }
         } catch (e) {
             console.error(e);
+            setRequestState(RequestState.failed);
         }
     };
+
+    useEffect(() => {
+        if (requestState !== null) {
+            setTimeout(() => {
+                setRequestState(null);
+            }, 3000);
+        }
+    }, [requestState]);
 
     return (
         <Styles className="subscription-banner-wrapper">
@@ -32,12 +64,18 @@ const SubscriptionBanner = () => {
             <section className="subscription-banner-section">
                 <p>Um pouco a cada dia, muito a cada semana</p>
                 <Input
+                    requestState={requestState}
                     showButton={true}
                     handleChange={setEmail}
                     handleSubmit={saveNewUser}
                     label="Subscrever"
                     placeholder="Introduza aqui o seu email"
                 />
+                {requestState &&
+                    requestState !== RequestState.loading &&
+                    requestMessage && (
+                        <Toast type={requestState} message={requestMessage} />
+                    )}
                 <p>Fique a saber assim que a app for lançada!</p>
             </section>
             <img

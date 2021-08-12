@@ -1,7 +1,7 @@
 import Styles from './Button.styled';
 
 interface IProps {
-    label: string;
+    label: string | JSX.Element | null;
     callback: () => void;
 }
 

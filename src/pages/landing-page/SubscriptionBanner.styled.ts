@@ -47,6 +47,7 @@ const styles = styled.section`
         align-items: center;
         flex-direction: column;
     }
+
     .subscription-banner-section p {
         font-size: 23px;
         margin: 0;
