@@ -29,7 +29,7 @@ const AppSection = () => {
                 </article>
             </section>
             <footer className="app-section-footer">
-                <p>
+                <p className="app-section-p">
                     🇵🇹 Uma App totalmente <b>Portuguesa</b> 🇵🇹
                 </p>
             </footer>
