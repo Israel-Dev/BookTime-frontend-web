@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const styles = styled.section`
+    position: relative;
     padding: 75px 0;
     display: flex;
     justify-content: center;
@@ -22,6 +23,14 @@ const styles = styled.section`
         justify-content: center;
         flex-direction: row;
         align-items: center;
+        z-index: 10;
+    }
+
+    .about-me-book-overlay {
+        width: 100%;
+        position: absolute;
+        transform: rotate(180deg);
+        bottom: -180px;
     }
 `;
 
