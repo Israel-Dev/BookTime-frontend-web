@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 const styles = styled.section`
     width: 100%;
+    top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-direction: column;
 
     .app-section-padding {
-        position: absolute;
-        top: -115px;
         width: 100%;
         display: flex;
         justify-content: space-between;

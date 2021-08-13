@@ -24,10 +24,15 @@ const AppSection = () => {
                         src={AppDemo}
                         className="app-section-img"
                         alt="app-demo"
-                        height="850px"
+                        height="550px"
                     />
                 </article>
             </section>
+            <footer className="app-section-footer">
+                <p>
+                    🇵🇹 Uma App totalmente <b>Portuguesa</b> 🇵🇹
+                </p>
+            </footer>
         </Styles>
     );
 };
