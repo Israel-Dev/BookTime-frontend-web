@@ -12,7 +12,7 @@ const styles = styled.footer`
         width: 100%;
         height: 150px;
         max-width: 1366px;
-        padding-top: 12vw;
+        padding-top: 10vw;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -20,7 +20,8 @@ const styles = styled.footer`
     }
 
     .footer-icon-section {
-        width: 30%;
+        width: 50vw;
+        max-width: 350px;
         display: flex;
         justify-content: space-evenly;
     }
@@ -30,11 +31,12 @@ const styles = styled.footer`
     }
 
     .footer-line-span {
-        width: 100%;
+        width: 80%;
         border-bottom: solid 1px white;
     }
 
     .footer-paragraph {
+        text-align: center;
         margin: 0;
         padding: 0;
         color: white;

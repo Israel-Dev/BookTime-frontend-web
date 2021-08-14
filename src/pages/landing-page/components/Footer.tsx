@@ -4,6 +4,8 @@ import Email from '../../../assets/email.png';
 import Instagram from '../../../assets/instagram.png';
 import bookOverlay from '../../../assets/book-shape-overlay.svg';
 
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     return (
         <Styles className="footer-wrapper">
@@ -14,17 +16,29 @@ const Footer = () => {
             />
             <section className="footer-padding">
                 <section className="footer-icon-section">
-                    <img
-                        src={LinkedIn}
-                        alt="linked-in"
-                        className="footer-icon"
-                    />
-                    <img src={Email} alt="email" className="footer-icon" />
-                    <img
-                        src={Instagram}
-                        alt="instagram"
-                        className="footer-icon"
-                    />
+                    <a
+                        href="https://www.linkedin.com/in/israel-santos-silva-151652188/"
+                        target="_blank"
+                    >
+                        <img
+                            src={LinkedIn}
+                            alt="linked-in"
+                            className="footer-icon"
+                        />
+                    </a>
+                    <a href="mailto: izrael37@gmail.com">
+                        <img src={Email} alt="email" className="footer-icon" />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/israel_silva37/"
+                        target="_blank"
+                    >
+                        <img
+                            src={Instagram}
+                            alt="instagram"
+                            className="footer-icon"
+                        />
+                    </a>
                 </section>
                 <span className="footer-line-span" />
                 <footer className="footer-footer">
