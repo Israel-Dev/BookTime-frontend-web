@@ -48,6 +48,16 @@ const styles = styled.footer`
         transform: rotate(180deg);
         top: -11vw;
     }
+
+    .footer-footer {
+        width: 85%;
+    }
+
+    @media (max-width: 600px) {
+        .footer-paragraph {
+            font-size: 14px;
+        }
+    }
 `;
 
 export default styles;
