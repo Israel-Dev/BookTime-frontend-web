@@ -26,41 +26,23 @@ const styles = styled.section`
         z-index: 10;
     }
 
-    /* @media (min-width: 1001px) {
-        .about-me-book-overlay {
-            bottom: -100px;
+    @media (max-width: 600px) {
+        .about-me-padding {
+            flex-direction: column;
+        }
+
+        .about-me-image {
+            height: auto;
+            width: 85%;
+            max-width: 350px;
+        }
+
+        .about-me-article {
+            width: 85%;
+            padding: 0;
+            text-align: center;
         }
     }
-
-    @media (max-width: 1000px) {
-        .about-me-book-overlay {
-            bottom: -100px;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .about-me-book-overlay {
-            bottom: -80px;
-        }
-    }
-
-    @media (max-width: 800px) {
-        .about-me-book-overlay {
-            bottom: -70px;
-        }
-    }
-
-    @media (max-width: 680px) {
-        .about-me-book-overlay {
-            bottom: -55px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .about-me-book-overlay {
-            bottom: -40px;
-        }
-    } */
 `;
 
 export default styles;
