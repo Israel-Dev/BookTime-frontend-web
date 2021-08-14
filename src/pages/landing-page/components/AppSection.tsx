@@ -19,7 +19,7 @@ const AppSection = () => {
                         irá ajudar-te a não te desleixares com a leitura.
                     </p>
                 </article>
-                <article className="app-section-article">
+                <article className="app-section-article right">
                     <img
                         src={AppDemo}
                         className="app-section-img"
@@ -29,8 +29,10 @@ const AppSection = () => {
                 </article>
             </section>
             <footer className="app-section-footer">
-                <p className="app-section-p">
-                    🇵🇹 Uma App totalmente <b>Portuguesa</b> 🇵🇹
+                <p className="app-section-p flag">
+                    🇵🇹 Uma App <br className="br" />
+                    totalmente
+                    <b> Portuguesa</b> 🇵🇹
                 </p>
             </footer>
         </Styles>

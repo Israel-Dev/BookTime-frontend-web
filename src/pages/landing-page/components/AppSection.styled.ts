@@ -26,8 +26,49 @@ const styles = styled.section`
         padding-left: 25px;
     }
 
+    .right {
+        text-align: right;
+    }
+
     .app-section-p {
         font-size: 20px;
+    }
+
+    .flag {
+        text-align: center;
+    }
+
+    .br {
+        display: none;
+    }
+
+    @media (max-width: 600px) {
+        text-align: center;
+
+        .app-section-padding {
+            flex-direction: column;
+        }
+
+        .app-section-article {
+            width: 90%;
+        }
+
+        .app-section-p {
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .app-section-img {
+            height: 400px;
+        }
+
+        .app-section-footer {
+            width: 85%;
+        }
+
+        .br {
+            display: block;
+        }
     }
 `;
 
