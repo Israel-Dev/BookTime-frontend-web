@@ -26,12 +26,41 @@ const styles = styled.section`
         z-index: 10;
     }
 
-    .about-me-book-overlay {
-        width: 100%;
-        position: absolute;
-        transform: rotate(180deg);
-        bottom: -180px;
+    /* @media (min-width: 1001px) {
+        .about-me-book-overlay {
+            bottom: -100px;
+        }
     }
+
+    @media (max-width: 1000px) {
+        .about-me-book-overlay {
+            bottom: -100px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .about-me-book-overlay {
+            bottom: -80px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .about-me-book-overlay {
+            bottom: -70px;
+        }
+    }
+
+    @media (max-width: 680px) {
+        .about-me-book-overlay {
+            bottom: -55px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-me-book-overlay {
+            bottom: -40px;
+        }
+    } */
 `;
 
 export default styles;

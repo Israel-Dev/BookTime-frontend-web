@@ -1,6 +1,5 @@
 import Styles from './AboutMe.styled';
 import AboutMeImg from '../../../assets/about-me.png';
-import bookOverlay from '../../../assets/book-shape-overlay.svg';
 
 const AboutMe = () => {
     return (
@@ -21,11 +20,6 @@ const AboutMe = () => {
                     </p>
                 </article>
             </section>
-            <img
-                src={bookOverlay}
-                alt="about-me-book-overlay"
-                className="about-me-book-overlay"
-            />
         </Styles>
     );
 };

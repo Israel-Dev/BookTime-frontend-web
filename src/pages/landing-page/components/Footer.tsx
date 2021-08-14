@@ -2,10 +2,16 @@ import Styles from './Footer.styled';
 import LinkedIn from '../../../assets/linkedin.png';
 import Email from '../../../assets/email.png';
 import Instagram from '../../../assets/instagram.png';
+import bookOverlay from '../../../assets/book-shape-overlay.svg';
 
 const Footer = () => {
     return (
         <Styles className="footer-wrapper">
+            <img
+                src={bookOverlay}
+                alt="footer-book-overlay"
+                className="footer-book-overlay"
+            />
             <section className="footer-padding">
                 <section className="footer-icon-section">
                     <img
