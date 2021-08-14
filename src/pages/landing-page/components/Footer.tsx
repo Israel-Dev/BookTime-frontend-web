@@ -4,8 +4,6 @@ import Email from '../../../assets/email.png';
 import Instagram from '../../../assets/instagram.png';
 import bookOverlay from '../../../assets/book-shape-overlay.svg';
 
-import { Link } from 'react-router-dom';
-
 const Footer = () => {
     return (
         <Styles className="footer-wrapper">
@@ -19,6 +17,7 @@ const Footer = () => {
                     <a
                         href="https://www.linkedin.com/in/israel-santos-silva-151652188/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             src={LinkedIn}
@@ -32,6 +31,7 @@ const Footer = () => {
                     <a
                         href="https://www.instagram.com/israel_silva37/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <img
                             src={Instagram}
