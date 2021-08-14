@@ -8,6 +8,7 @@ const styles = styled.article`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     .input {
         height: 100%;
@@ -32,6 +33,20 @@ const styles = styled.article`
         position: absolute;
         right: 0;
         height: 100%;
+    }
+
+    @media (max-width: 600px) {
+        height: auto;
+
+        .input {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .input-button-article {
+            position: relative;
+            height: 50px;
+        }
     }
 `;
 

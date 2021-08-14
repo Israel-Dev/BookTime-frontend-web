@@ -69,7 +69,7 @@ const SubscriptionBanner = () => {
                     handleChange={setEmail}
                     handleSubmit={saveNewUser}
                     label="Subscrever"
-                    placeholder="Introduza aqui o seu email"
+                    placeholder="email@exemplo.com"
                 />
                 {requestState &&
                     requestState !== RequestState.loading &&

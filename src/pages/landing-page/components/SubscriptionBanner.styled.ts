@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../utils/colors';
 
-const styles = styled.section`
+const styles = styled.header`
     position: relative;
     overflow: hidden;
     height: 755px;
@@ -24,7 +24,6 @@ const styles = styled.section`
 
     .subscription-banner-p {
         color: ${colors.yellow};
-        font-size: 20px;
         margin: 0;
     }
 
@@ -34,6 +33,11 @@ const styles = styled.section`
         margin: 10px 0;
     }
 
+    .subscription-banner-line-separator {
+        max-width: 550px;
+        width: 85%;
+    }
+
     .subscription-banner-header,
     .subscription-banner-line-separator,
     .subscription-banner-section {
@@ -41,6 +45,8 @@ const styles = styled.section`
     }
 
     .subscription-banner-section {
+        width: 85%;
+        max-width: 600px;
         height: 200px;
         display: flex;
         justify-content: space-evenly;
@@ -67,6 +73,20 @@ const styles = styled.section`
         top: 0;
         left: 0;
         object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+        .subscription-banner-section {
+            height: 300px;
+        }
+
+        .subscription-banner-h1 {
+            font-size: 12vw;
+        }
+
+        .subscription-banner-section p {
+            font-size: 17px;
+        }
     }
 `;
 
