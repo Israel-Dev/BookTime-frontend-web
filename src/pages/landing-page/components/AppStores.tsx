@@ -11,7 +11,12 @@ const AppStores = () => {
                     <span>Android</span>
                 </h3>
                 <footer className="app-stores-article-footer">
-                    <img src={AppStoreImg} alt="app-store-icon" height="50px" />
+                    <img
+                        src={AppStoreImg}
+                        alt="app-store-icon"
+                        height="50px"
+                        className="app-store-logo"
+                    />
                     <img
                         src={GooglePlayImg}
                         alt="app-store-icon"

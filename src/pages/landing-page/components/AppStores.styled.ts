@@ -10,12 +10,39 @@ const styles = styled.section`
     flex-direction: column;
     background-color: ${colors.lightBlue};
 
+    .app-stores-article {
+        width: 85%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .app-stores-article-footer {
         width: 100%;
-        max-width: 1366px;
+        max-width: 1000px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    @media (max-width: 600px) {
+        padding: 60px 0;
+
+        .app-stores-article-footer {
+            flex-direction: column;
+        }
+
+        .app-store-logo {
+            margin-bottom: 15px;
+        }
+
+        img {
+            height: auto;
+            width: 60vw;
+            max-width: 200px;
+        }
     }
 `;
 
