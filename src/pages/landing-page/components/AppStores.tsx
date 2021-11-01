@@ -7,7 +7,7 @@ const AppStores = () => {
         <Styles className="app-stores-wrapper">
             <article className="app-stores-article">
                 <h3>
-                    Estará disponível tanto para <span>IOS</span> como{' '}
+                    It will be available for both <span>IOS</span> and{' '}
                     <span>Android</span>
                 </h3>
                 <footer className="app-stores-article-footer">

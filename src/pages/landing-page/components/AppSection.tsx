@@ -7,16 +7,15 @@ const AppSection = () => {
             <section className="app-section-padding">
                 <article className="app-section-article left">
                     <h2 className="app-section-h1">
-                        A App que vai ajudar-te a atingir as tuas metas
-                        literárias
+                        The App that will help you reach your literary goals
                     </h2>
                     <p className="app-section-p">
-                        Devido aos afazeres do dia a dia, temos a tendência de
-                        deixar o nosso livro de lado...{' '}
+                        Due to the daily tasks, we tend to leave our book
+                        aside...{' '}
                         <span>
                             <b>BookTime</b>
                         </span>{' '}
-                        irá ajudar-te a não te desleixares com a leitura.
+                        will help you not get sloppy with your reading.
                     </p>
                 </article>
                 <article className="app-section-article right">
@@ -30,9 +29,8 @@ const AppSection = () => {
             </section>
             <footer className="app-section-footer">
                 <p className="app-section-p flag">
-                    🇵🇹 Uma App <br className="br" />
-                    totalmente
-                    <b> Portuguesa</b> 🇵🇹
+                    🇵🇹 A fully <br className="br" />
+                    <b> Portuguese </b> App 🇵🇹
                 </p>
             </footer>
         </Styles>

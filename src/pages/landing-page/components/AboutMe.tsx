@@ -11,12 +11,12 @@ const AboutMe = () => {
                     alt="about-me"
                 />
                 <article className="about-me-article">
-                    <h3>Sobre mim</h3>
+                    <h3>About me</h3>
                     <p>
-                        Olá! Chamo-me Israel Silva e sou um apaixonado por
-                        livros, programação e auto desenvolvimento. Então,
-                        decidi juntar tudo e desenvolver uma app que nos
-                        apoia-se a mantêr a consistência nas nossas leituras!
+                        Hi! My name is Israel Silva and I am passionate about
+                        books, programming and self development. So, I decided
+                        to put it all together and develop an app that supports
+                        us in maintaining consistency in our readings!
                     </p>
                 </article>
             </section>

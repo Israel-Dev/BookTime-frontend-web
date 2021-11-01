@@ -22,7 +22,7 @@ const SubscriptionBanner = () => {
 
             if (!responseData) {
                 setRequestState(RequestState.failed);
-                return setRequestMessage('O email não é válido');
+                return setRequestMessage('Email is not valid');
             }
 
             setRequestMessage(responseData.message);
@@ -53,7 +53,7 @@ const SubscriptionBanner = () => {
     return (
         <Styles className="subscription-banner-wrapper">
             <header className="subscription-banner-header">
-                <p className="subscription-banner-p">App de Leitura</p>
+                <p className="subscription-banner-p">Reading App</p>
                 <h1 className="subscription-banner-h1 courgette">BookTime</h1>
             </header>
             <img
@@ -62,21 +62,21 @@ const SubscriptionBanner = () => {
                 className="subscription-banner-line-separator"
             />
             <section className="subscription-banner-section">
-                <p>Um pouco a cada dia, muito a cada semana</p>
+                <p>A little each day, a lot each week</p>
                 <Input
                     requestState={requestState}
                     showButton={true}
                     handleChange={setEmail}
                     handleSubmit={saveNewUser}
-                    label="Subscrever"
-                    placeholder="email@exemplo.com"
+                    label="Subscribe"
+                    placeholder="email@example.com"
                 />
                 {requestState &&
                     requestState !== RequestState.loading &&
                     requestMessage && (
                         <Toast type={requestState} message={requestMessage} />
                     )}
-                <p>Fique a saber assim que a app for lançada!</p>
+                <p>Find out as soon as the app launches!</p>
             </section>
             <img
                 src={books}

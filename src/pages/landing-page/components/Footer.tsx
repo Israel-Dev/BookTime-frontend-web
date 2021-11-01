@@ -43,8 +43,7 @@ const Footer = () => {
                 <span className="footer-line-span" />
                 <footer className="footer-footer">
                     <p className="footer-paragraph">
-                        Copyright © 2021 Israel Silva - Todos os direitos
-                        reservados
+                        Copyright © 2021 Israel Silva - All rights reserved
                     </p>
                 </footer>
             </section>
